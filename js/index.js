@@ -51,3 +51,40 @@ links.forEach(link => {
 })
 
 //7
+const boat = document.querySelector('.inverse-content img')
+boat.addEventListener('mouseenter', () => {
+    boat.src = '/img/luca-bravo-O453M2Liufs-unsplash.jpg'
+})
+boat.addEventListener('mouseleave', () => {
+    boat.src = '/img/fun.jpg'
+})
+
+//8
+const funBus = document.querySelector('h1')
+funBus.addEventListener('click', () => {
+    funBus.style.color = 'yellow'
+})
+
+//9
+const welcome = document.addEventListener('keydown', logKey);
+
+function logKey(e) {
+    log.textContent += ` ${e.code}`;
+}
+
+//10
+function zoom(event) {
+    event.preventDefault();
+
+    scale += event.deltaY * -0.01;
+
+    // Restrict scale
+    scale = Math.min(Math.max(.125, scale), 4);
+
+    // Apply scale transform
+    el.style.transform = `scale(${scale})`;
+}
+
+let scale = 1;
+const el = document.querySelector('.footer');
+el.onwheel = zoom;

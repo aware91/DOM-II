@@ -29,3 +29,25 @@ window.addEventListener('resize', () => {
 })
 
 //5
+const body = document.querySelector("body");
+body.addEventListener("click", () => {
+    body.style.backgroundColor="#89c6a4";
+})
+const cardGroup = document.querySelector(".content-section");
+cardGroup.addEventListener('click', (event) => {
+    cardGroup.style.backgroundColor="#aad0e0";
+});
+const card = document.querySelector(".content-section .text-content");
+card.addEventListener('click', (event) => {
+    card.style.backgroundColor="#FFFF66";
+})
+
+//6
+const links = document.querySelectorAll('.nav')
+links.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+    })
+})
+
+//7
